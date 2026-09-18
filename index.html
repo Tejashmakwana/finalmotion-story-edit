@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FinalMotion Story — Hyperframes</title>
+  <style>
+    @font-face{font-family:Caption;src:url('assets/ArialBold.ttf');font-weight:700}
+    @font-face{font-family:Regular;src:url('assets/Regular.ttf')}
+    @font-face{font-family:Accent;src:url('assets/Accent.ttc')}
+    @font-face{font-family:Editorial;src:url('assets/Editorial.ttf')}
+    *{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#090b0e}
+    #stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:#090b0e}
+    #plate{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover;transform-origin:50% 43%}
+    #fx{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none}
+    .source{position:absolute;width:2px;height:2px;left:-20px;top:-20px;opacity:.001}
+    .burn{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover;mix-blend-mode:screen;opacity:.68}
+  </style>
+</head>
+<body>
+  <main id="stage" data-composition-id="finalmotion-story-hyperframes" data-start="0" data-duration="89.9" data-width="1920" data-height="1080" data-fps="30" data-no-timeline>
+    <video id="plate" class="clip" src="assets/picture.mp4" data-start="0" data-duration="89.9" data-track-index="0" muted playsinline preload="auto"></video>
+    <video id="phone-video" class="clip source" src="assets/phone.mp4" data-start="61.2666667" data-duration="2.5833333" data-track-index="1" muted playsinline preload="auto"></video>
+    <video id="example-0" class="clip source" src="assets/example-0.mp4" data-start="39.55" data-duration="2.85" data-track-index="2" muted playsinline preload="auto"></video>
+    <video id="example-1" class="clip source" src="assets/example-1.mp4" data-start="39.55" data-duration="2.85" data-track-index="3" muted playsinline preload="auto"></video>
+    <video id="example-2" class="clip source" src="assets/example-2.mp4" data-start="39.55" data-duration="2.85" data-track-index="4" muted playsinline preload="auto"></video>
+    <video id="example-3" class="clip source" src="assets/example-3.mp4" data-start="39.55" data-duration="2.85" data-track-index="5" muted playsinline preload="auto"></video>
+    <video id="film-burn-intro" class="clip burn" src="assets/film-burn.mp4" data-start="3.05" data-duration="0.4666667" data-track-index="6" muted playsinline preload="auto"></video>
+    <video id="film-burn-collage" class="clip burn" src="assets/film-burn.mp4" data-start="39.35" data-duration="0.4666667" data-track-index="7" muted playsinline preload="auto"></video>
+    <video id="film-burn-difference" class="clip burn" src="assets/film-burn.mp4" data-start="75.32" data-duration="0.4666667" data-track-index="8" muted playsinline preload="auto"></video>
+    <canvas id="fx" class="clip" width="1920" height="1080" data-start="0" data-duration="89.9" data-track-index="9"></canvas>
+  </main>
+  <script src="film.js"></script>
+</body>
+</html>
